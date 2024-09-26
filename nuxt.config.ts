@@ -1,25 +1,25 @@
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/tailwindcss', 'shadcn-nuxt'],
+    modules: ['@nuxtjs/tailwindcss', 'shadcn-nuxt'],
 
-  shadcn: {
-    /**
-     * Prefix for all the imported component
-     */
-    prefix: '',
-    /**
-     * Directory that the component lives in.
-     * @default "./components/ui"
-     */
-    componentDir: './components/ui'
-  },
+    shadcn: {
+        /**
+         * Prefix for all the imported component
+         */
+        prefix: '',
+        /**
+         * Directory that the component lives in.
+         * @default "./components/ui"
+         */
+        componentDir: './components/ui',
+    },
 
-  typescript: {
-    tsConfig: {
-      compilerOptions: {
-        baseUrl: '.'
-      }
-    }
-  },
+    typescript: {
+        tsConfig: {
+            compilerOptions: {
+                baseUrl: '.',
+            },
+        },
+    },
 
-  compatibilityDate: '2024-09-23'
-})
+    compatibilityDate: '2024-09-23',
+});
