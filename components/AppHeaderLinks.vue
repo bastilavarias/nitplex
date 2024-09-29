@@ -37,10 +37,6 @@ const links = ref([
         url: '/movies',
     },
     {
-        text: 'TV Shows',
-        url: '/tv-shows',
-    },
-    {
         text: 'Animes',
         url: '/animes',
     },
