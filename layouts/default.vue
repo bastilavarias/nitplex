@@ -1,11 +1,10 @@
 <template>
-    <div class="flex min-h-screen w-full grid-rows-[auto,1fr,auto]">
-        <BaseContainer>
-            <AppHeader></AppHeader>
-            <main>
-                <NuxtPage />
-            </main>
-        </BaseContainer>
-    </div>
+    <BaseContainer>
+        <AppHeader></AppHeader>
+        <main>
+            <NuxtPage />
+        </main>
+    </BaseContainer>
+    <AppFooter />
 </template>
 <script setup lang="ts"></script>

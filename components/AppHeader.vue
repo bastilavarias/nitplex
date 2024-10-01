@@ -8,9 +8,9 @@
         <div :class="[isShow ? 'opacity-100' : 'opacity-0']"></div>
         <div class="flex items-center justify-between">
             <AppLogo />
-            <nav class="hidden lg:block">
-                <AppHeaderLinks type="desktop" />
-            </nav>
+            <!--            <nav class="hidden lg:block">-->
+            <!--                <AppHeaderLinks type="desktop" />-->
+            <!--            </nav>-->
             <!--
         <DropdownMenu>
             <DropdownMenuTrigger as-child>
