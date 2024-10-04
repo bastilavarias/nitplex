@@ -33,12 +33,12 @@ const links = ref([
         url: '/',
     },
     {
-        text: 'Movies',
-        url: '/movies',
+        text: 'Cinema',
+        url: '/cinema',
     },
     {
-        text: 'Animes',
-        url: '/animes',
+        text: 'About',
+        url: '/about',
     },
 ]);
 

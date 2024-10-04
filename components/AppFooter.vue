@@ -2,7 +2,7 @@
     <footer class="bg-secondary flex flex-col items-center py-2 px-5">
         <div class="text-xs text-center">
             Copyright © 2024
-            <a href="#" class="font-bold hover:text-primary">NITPLEX</a>. All
+            <a href="/" class="font-bold hover:text-primary">NITPLEX</a>. All
             rights reserved.
         </div>
         <div class="text-xs text-center">

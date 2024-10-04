@@ -1,7 +1,7 @@
 <template>
     <BaseContainer>
         <AppHeader></AppHeader>
-        <main>
+        <main class="pb-10">
             <NuxtPage />
         </main>
     </BaseContainer>

@@ -1,9 +1,15 @@
 <template>
     <BaseCarousel ref="carouselEl" :options="options">
-        <BaseCarouselSlide v-for="n in 5" :key="n">
+        <BaseCarouselSlide v-for="(movie, index) in movies" :key="index">
             <div
-                class="w-full bg-[url('https://image.tmdb.org/t/p/original/peVe0NQNdZMXwtTohnv8iwJQb2d.jpg')] bg-no-repeat bg-center bg-cover rounded relative"
-                style="height: 30rem"
+                :style="{
+                    backgroundImage: `url('${useTMDBImage(movie.backdrop_path, 'cover')}')`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                    height: '30rem',
+                }"
+                class="w-full rounded relative"
             >
                 <div
                     class="absolute top-0 bottom-0 w-full h-full bg-gradient-to-b from-transparent to-black z-0"
@@ -18,11 +24,13 @@
                                 href="#"
                                 class="text-4xl font-bold tracking-tight transition-colors hover:text-primary"
                             >
-                                Movie name
+                                {{ movie.title }}
                             </a>
                             <p class="text-md">
                                 2024 | Action, Thriller, Drama
-                                <Badge class="text-md">6.6</Badge>
+                                <Badge class="text-md">{{
+                                    useFormatRating(movie.vote_average)
+                                }}</Badge>
                             </p>
                         </div>
                         <Button class="space-x-2" size="lg"
@@ -39,6 +47,16 @@
 
 <script setup lang="ts">
 import { PlayIcon } from 'lucide-vue-next';
+import { useTMDBImage } from '@/composables/useTMDBImage';
+import { useFormatRating } from '@/composables/useFormatRating';
+import { cn } from '@/lib/utils';
+
+const props = defineProps({
+    movies: {
+        type: Array,
+        required: true,
+    },
+});
 
 const options = reactive({
     Panzoom: {
